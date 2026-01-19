@@ -1,13 +1,13 @@
 <?php
 /**
- * Header Template
+ * Header - Birebir Aynı
  */
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -16,27 +16,9 @@
 <header class="site-header">
     <div class="header-container">
         <a href="<?php echo home_url(); ?>" class="site-logo">
-            <?php if (has_custom_logo()): ?>
-                <?php the_custom_logo(); ?>
-            <?php else: ?>
-                <img src="<?php echo KARGOLOJIK_URI; ?>/assets/images/logo.png" alt="<?php bloginfo('name'); ?>">
-            <?php endif; ?>
-            <h1><?php bloginfo('name'); ?></h1>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            <span>KARGOLOJİK</span>
         </a>
-        
-        <nav class="main-nav">
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'primary',
-                'container' => false,
-                'fallback_cb' => false,
-            ));
-            ?>
-        </nav>
-        
-        <button class="mobile-menu-btn" aria-label="Menü">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
     </div>
 </header>
 

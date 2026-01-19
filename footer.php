@@ -1,52 +1,24 @@
 <?php
 /**
- * Footer Template
+ * Footer - Birebir Aynı
  */
 ?>
 </main>
 
-<footer class="site-footer">
-    <div class="footer-container">
-        <div class="footer-section">
-            <h3>Kargolojik</h3>
-            <p>Türkiye'nin en kapsamlı kargo şube arama ve sorun çözüm platformu.</p>
-        </div>
-        
-        <div class="footer-section">
-            <h3>Kargo Şirketleri</h3>
-            <ul>
-                <li><a href="<?php echo home_url('/kargo-sirketi/aras-kargo'); ?>">Aras Kargo</a></li>
-                <li><a href="<?php echo home_url('/kargo-sirketi/ptt-kargo'); ?>">PTT Kargo</a></li>
-                <li><a href="<?php echo home_url('/kargo-sirketi/yurtici-kargo'); ?>">Yurtiçi Kargo</a></li>
-                <li><a href="<?php echo home_url('/kargo-sirketi/mng-kargo'); ?>">MNG Kargo</a></li>
-                <li><a href="<?php echo home_url('/kargo-sirketi/surat-kargo'); ?>">Sürat Kargo</a></li>
-            </ul>
-        </div>
-        
-        <div class="footer-section">
-            <h3>Yardım</h3>
-            <ul>
-                <li><a href="<?php echo home_url('/yardim/hasarli-kargo'); ?>">Hasarlı Kargo</a></li>
-                <li><a href="<?php echo home_url('/yardim/kayip-kargo'); ?>">Kayıp Kargo</a></li>
-                <li><a href="<?php echo home_url('/yardim/geciken-kargo'); ?>">Geciken Kargo</a></li>
-                <li><a href="<?php echo home_url('/yardim/tazminat'); ?>">Tazminat Hakları</a></li>
-            </ul>
-        </div>
-        
-        <div class="footer-section">
-            <h3>İletişim</h3>
-            <ul>
-                <li><a href="<?php echo home_url('/iletisim'); ?>">İletişim Formu</a></li>
-                <li><a href="<?php echo home_url('/hakkimizda'); ?>">Hakkımızda</a></li>
-                <li><a href="<?php echo home_url('/gizlilik-politikasi'); ?>">Gizlilik Politikası</a></li>
-            </ul>
-        </div>
+<!-- Bottom Tab Bar -->
+<nav class="bottom-tabs">
+    <div class="tab-container">
+        <a href="<?php echo home_url(); ?>" class="tab-item <?php echo is_front_page() ? 'active' : ''; ?>">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </a>
+        <a href="<?php echo home_url('/yardim'); ?>" class="tab-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        </a>
+        <a href="<?php echo home_url('/?s='); ?>" class="tab-item <?php echo is_search() ? 'active' : ''; ?>">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </a>
     </div>
-    
-    <div class="footer-bottom">
-        <p>Kargolojik © <?php echo date('Y'); ?> - Tüm hakları saklıdır.</p>
-    </div>
-</footer>
+</nav>
 
 <?php wp_footer(); ?>
 </body>

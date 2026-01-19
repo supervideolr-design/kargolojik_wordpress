@@ -2,13 +2,10 @@
 Theme Name: Kargolojik
 Theme URI: https://kargolojik.com
 Author: Kargolojik Team
-Author URI: https://kargolojik.com
 Description: Kargo şube arama ve sorun çözüm platformu WordPress teması
 Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv2
 Text Domain: kargolojik
-Tags: cargo, shipping, branch-finder, turkish
 */
 
 /* ========================================
@@ -52,6 +49,7 @@ body {
   background-color: var(--background);
   color: var(--text-primary);
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 a {
@@ -65,113 +63,108 @@ img {
 }
 
 /* ========================================
-   Header
+   Header - Birebir Aynı
    ======================================== */
 .site-header {
   background: var(--primary-color);
-  padding: 12px 0;
+  padding: 14px 16px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: var(--shadow-lg);
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 0 16px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .site-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .site-logo img {
-  height: 40px;
+  height: 28px;
   width: auto;
 }
 
-.site-logo h1 {
+.site-logo span {
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-}
-
-.main-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 24px;
-}
-
-.main-nav a {
-  color: rgba(255,255,255,0.9);
-  font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: all 0.2s;
-}
-
-.main-nav a:hover {
-  background: rgba(255,255,255,0.15);
-  color: #fff;
-}
-
-.mobile-menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
+  letter-spacing: 0.5px;
 }
 
 /* ========================================
-   Hero Section
+   Banner Reklam Alanı
+   ======================================== */
+.banner-ad {
+  max-width: 500px;
+  margin: 16px auto;
+  padding: 0 16px;
+}
+
+.banner-ad-inner {
+  background: var(--card-bg);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+}
+
+.banner-ad-text {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ========================================
+   Hero Section - Birebir Aynı
    ======================================== */
 .hero-section {
   text-align: center;
-  padding: 48px 16px;
-  background: linear-gradient(135deg, var(--background) 0%, #e0f2fe 100%);
-}
-
-.hero-title {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 4px;
-}
-
-.hero-subtitle {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 12px;
-}
-
-.hero-description {
-  font-size: 16px;
-  color: var(--text-secondary);
+  padding: 32px 16px 24px;
   max-width: 500px;
   margin: 0 auto;
 }
 
+.hero-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.hero-subtitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.hero-description {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
 /* ========================================
-   Search Box
+   Search Box - Birebir Aynı
    ======================================== */
 .search-container {
-  max-width: 600px;
-  margin: 24px auto;
+  max-width: 500px;
+  margin: 0 auto;
   padding: 0 16px;
 }
 
 .search-box {
   display: flex;
-  gap: 12px;
+  gap: 10px;
 }
 
 .search-input-wrapper {
@@ -181,22 +174,23 @@ img {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
-  padding: 0 16px;
-  box-shadow: var(--shadow);
+  padding: 0 14px;
+  height: 48px;
 }
 
 .search-input-wrapper svg {
   color: var(--text-muted);
-  margin-right: 12px;
+  flex-shrink: 0;
 }
 
 .search-input {
   flex: 1;
   border: none;
   outline: none;
-  font-size: 16px;
-  padding: 14px 0;
+  font-size: 15px;
+  padding: 12px;
   background: transparent;
+  color: var(--text-primary);
 }
 
 .search-input::placeholder {
@@ -207,9 +201,10 @@ img {
   background: var(--primary-color);
   color: #fff;
   border: none;
-  padding: 14px 24px;
+  padding: 0 20px;
+  height: 48px;
   border-radius: var(--radius);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s;
@@ -220,10 +215,10 @@ img {
 }
 
 /* ========================================
-   Wizard Button
+   Wizard Button - Birebir Aynı
    ======================================== */
-.wizard-button {
-  max-width: 600px;
+.wizard-section {
+  max-width: 500px;
   margin: 20px auto;
   padding: 0 16px;
 }
@@ -235,39 +230,45 @@ img {
   background: var(--card-bg);
   border: 2px solid var(--secondary-color);
   border-radius: var(--radius-lg);
-  padding: 16px;
+  padding: 14px 16px;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+  text-decoration: none;
 }
 
 .wizard-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.25);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.2);
 }
 
 .wizard-icon {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   background: var(--secondary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.wizard-icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 .wizard-text {
   flex: 1;
-  margin-left: 16px;
+  margin-left: 14px;
   text-align: left;
 }
 
 .wizard-title {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--text-primary);
+  margin-bottom: 2px;
 }
 
 .wizard-subtitle {
@@ -277,15 +278,19 @@ img {
 
 .wizard-arrow {
   color: var(--secondary-color);
-  font-size: 24px;
+}
+
+.wizard-arrow svg {
+  width: 24px;
+  height: 24px;
 }
 
 /* ========================================
-   Stats Section
+   Stats Section - Birebir Aynı
    ======================================== */
 .stats-section {
-  max-width: 600px;
-  margin: 24px auto;
+  max-width: 500px;
+  margin: 20px auto;
   padding: 0 16px;
 }
 
@@ -293,7 +298,7 @@ img {
   display: flex;
   background: var(--card-bg);
   border-radius: var(--radius-lg);
-  padding: 24px;
+  padding: 20px 16px;
   box-shadow: var(--shadow);
 }
 
@@ -303,53 +308,206 @@ img {
 }
 
 .stat-number {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--primary-color);
+  line-height: 1.2;
 }
 
 .stat-label {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-secondary);
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .stat-divider {
   width: 1px;
   background: var(--border-color);
-  margin: 0 16px;
+  margin: 0 8px;
 }
 
 /* ========================================
-   Company Filters
+   Help Topics - Birebir Aynı
    ======================================== */
-.filter-section {
-  padding: 16px;
+.help-section {
+  max-width: 500px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.see-all {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.topic-card {
   background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 20px 12px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.2s;
+  display: block;
+}
+
+.topic-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.topic-icon {
+  width: 44px;
+  height: 44px;
+  background: #e0f2fe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  color: var(--primary-color);
+}
+
+.topic-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.topic-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+/* ========================================
+   Bottom Tab Bar - Birebir Aynı
+   ======================================== */
+.bottom-tabs {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 12px;
+  z-index: 1000;
+}
+
+.tab-container {
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 24px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.tab-item.active,
+.tab-item:hover {
+  color: var(--primary-color);
+}
+
+.tab-item svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 2px;
+}
+
+/* Body padding for bottom tabs */
+body {
+  padding-bottom: 70px;
+}
+
+/* ========================================
+   Search Page - Şube Arama
+   ======================================== */
+.search-page-header {
+  background: var(--primary-color);
+  padding: 16px;
+  color: #fff;
+}
+
+.search-page-header h1 {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-page .search-container {
+  background: var(--card-bg);
+  padding: 12px 16px;
   border-bottom: 1px solid var(--border-color);
+  max-width: 100%;
+}
+
+.search-page .search-box {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Company Filters - Birebir Aynı */
+.filter-section {
+  background: var(--card-bg);
+  padding: 12px 0;
   overflow-x: auto;
+  border-bottom: 1px solid var(--border-color);
+  -webkit-overflow-scrolling: touch;
 }
 
 .filter-container {
   display: flex;
   gap: 8px;
-  max-width: 1200px;
+  max-width: 500px;
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 .filter-pill {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 16px;
+  padding: 6px 14px;
   border: 1px solid var(--border-color);
   border-radius: 20px;
   background: var(--card-bg);
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.2s;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-secondary);
+  text-decoration: none;
 }
 
 .filter-pill:hover,
@@ -361,25 +519,20 @@ img {
 }
 
 .company-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
-/* ========================================
-   Branch Cards
-   ======================================== */
-.branches-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 24px 16px;
-}
-
+/* Results Count */
 .results-header {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 14px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
 }
 
 .results-count {
@@ -390,22 +543,25 @@ img {
 .clear-filters {
   color: #ef4444;
   font-weight: 600;
-  cursor: pointer;
   font-size: 14px;
+  text-decoration: none;
 }
 
-.branches-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 16px;
+/* Branch Cards - Birebir Aynı */
+.branches-list {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 16px 16px;
 }
 
 .branch-card {
   background: var(--card-bg);
   border-radius: var(--radius);
-  padding: 20px;
+  padding: 16px;
+  margin-bottom: 12px;
   box-shadow: var(--shadow);
-  cursor: pointer;
+  display: block;
+  text-decoration: none;
   transition: all 0.2s;
 }
 
@@ -418,21 +574,27 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .company-badge {
+  display: inline-block;
   padding: 4px 10px;
   border-radius: 6px;
   font-size: 12px;
   font-weight: 700;
 }
 
+.branch-card .chevron {
+  color: var(--text-muted);
+}
+
 .branch-name {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  line-height: 1.3;
 }
 
 .branch-location {
@@ -440,20 +602,90 @@ img {
   align-items: center;
   gap: 6px;
   color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.branch-location svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 48px 16px;
+}
+
+.empty-icon {
+  color: var(--border-color);
+  margin-bottom: 16px;
+}
+
+.empty-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.empty-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.empty-subtitle {
+  color: var(--text-muted);
   font-size: 14px;
 }
 
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 20px 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.pagination a,
+.pagination span {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pagination a {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.pagination a:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.pagination .current {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+}
+
 /* ========================================
-   Branch Detail Page
+   Single Branch Detail - Birebir Aynı
    ======================================== */
 .branch-detail-header {
-  padding: 40px 16px;
+  padding: 32px 16px;
   text-align: center;
   border-bottom-left-radius: 32px;
   border-bottom-right-radius: 32px;
 }
 
-.company-logo-container {
+.company-logo-box {
   width: 120px;
   height: 80px;
   background: #fff;
@@ -463,10 +695,10 @@ img {
   justify-content: center;
   margin: 0 auto 16px;
   padding: 12px;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.company-logo-container img {
+.company-logo-box img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -474,26 +706,36 @@ img {
 
 .company-name-header {
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
 .branch-info-card {
   background: var(--card-bg);
-  margin: -24px 16px 0;
+  max-width: 500px;
+  margin: -24px auto 0;
   border-radius: var(--radius-lg);
-  padding: 24px;
+  padding: 24px 20px;
   box-shadow: var(--shadow-lg);
   position: relative;
   z-index: 10;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+@media (min-width: 532px) {
+  .branch-info-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .branch-detail-name {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 12px;
+  color: var(--text-primary);
 }
 
 .location-badge {
@@ -502,57 +744,50 @@ img {
   justify-content: center;
   gap: 6px;
   font-weight: 600;
+  font-size: 15px;
 }
 
 .detail-section {
   background: var(--card-bg);
-  margin: 16px;
+  max-width: 500px;
+  margin: 16px auto;
   border-radius: var(--radius-lg);
   padding: 20px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
-.section-header {
+@media (min-width: 532px) {
+  .detail-section {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.detail-section-header {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 12px;
   color: var(--text-secondary);
   font-weight: 600;
+  font-size: 15px;
 }
 
-.address-text {
-  font-size: 16px;
-  line-height: 1.6;
+.detail-section-header svg {
+  width: 20px;
+  height: 20px;
 }
 
-.phone-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.phone-row:last-child {
-  border-bottom: none;
-}
-
-.phone-number {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.call-badge {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
+.detail-content {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-primary);
 }
 
 .action-buttons {
+  max-width: 500px;
+  margin: 0 auto;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -571,6 +806,7 @@ img {
   color: #fff;
   border: none;
   cursor: pointer;
+  text-decoration: none;
   transition: all 0.2s;
 }
 
@@ -579,8 +815,9 @@ img {
   transform: translateY(-1px);
 }
 
-.action-btn.call {
-  background: var(--primary-color);
+.action-btn svg {
+  width: 22px;
+  height: 22px;
 }
 
 .action-btn.maps {
@@ -591,239 +828,71 @@ img {
   background: #6366f1;
 }
 
-/* ========================================
-   Help Topics
-   ======================================== */
-.help-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 24px 16px;
-}
-
-.section-title-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.section-title {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.see-all {
-  color: var(--primary-color);
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.topics-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-  gap: 12px;
-}
-
-.topic-card {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  padding: 20px;
-  text-align: center;
-  box-shadow: var(--shadow);
-  transition: all 0.2s;
-}
-
-.topic-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-.topic-icon {
-  width: 48px;
-  height: 48px;
-  background: #e0f2fe;
-  border-radius: 50%;
+.back-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 12px;
+  gap: 8px;
+  padding: 16px;
   color: var(--primary-color);
-  font-size: 24px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
 }
 
-.topic-title {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4;
+.info-footer {
+  max-width: 500px;
+  margin: 16px auto 24px;
+  padding: 16px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+@media (min-width: 532px) {
+  .info-footer {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.info-footer svg {
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+
+.info-footer p {
+  flex: 1;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
 }
 
 /* ========================================
-   Footer
+   Footer - Minimal
    ======================================== */
 .site-footer {
   background: var(--text-primary);
-  color: #fff;
-  padding: 48px 16px 24px;
-  margin-top: 48px;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 32px;
-}
-
-.footer-section h3 {
-  font-size: 16px;
-  margin-bottom: 16px;
-  color: var(--primary-color);
-}
-
-.footer-section ul {
-  list-style: none;
-}
-
-.footer-section li {
-  margin-bottom: 8px;
-}
-
-.footer-section a {
   color: rgba(255,255,255,0.7);
-  transition: color 0.2s;
-}
-
-.footer-section a:hover {
-  color: #fff;
-}
-
-.footer-bottom {
+  padding: 24px 16px;
   text-align: center;
-  padding-top: 32px;
-  margin-top: 32px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  color: rgba(255,255,255,0.6);
-  font-size: 14px;
+  font-size: 13px;
+  margin-bottom: 60px;
 }
 
-/* ========================================
-   Pagination
-   ======================================== */
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 32px;
-}
-
-.pagination a,
-.pagination span {
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-weight: 500;
-}
-
-.pagination a {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  color: var(--text-secondary);
-  transition: all 0.2s;
-}
-
-.pagination a:hover {
-  border-color: var(--primary-color);
+.site-footer a {
   color: var(--primary-color);
 }
 
-.pagination .current {
-  background: var(--primary-color);
-  color: #fff;
-}
-
 /* ========================================
-   Loading & Empty States
+   Responsive
    ======================================== */
-.loading-spinner {
-  text-align: center;
-  padding: 48px;
-  color: var(--text-muted);
-}
-
-.empty-state {
-  text-align: center;
-  padding: 64px 16px;
-}
-
-.empty-icon {
-  font-size: 48px;
-  color: var(--border-color);
-  margin-bottom: 16px;
-}
-
-.empty-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--text-secondary);
-  margin-bottom: 8px;
-}
-
-.empty-subtitle {
-  color: var(--text-muted);
-}
-
-/* ========================================
-   Responsive Design
-   ======================================== */
-@media (max-width: 768px) {
-  .main-nav {
-    display: none;
-  }
-  
-  .mobile-menu-btn {
-    display: block;
-  }
-  
-  .hero-title,
-  .hero-subtitle {
-    font-size: 26px;
-  }
-  
-  .branches-grid {
-    grid-template-columns: 1fr;
-  }
-  
+@media (min-width: 768px) {
   .topics-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .stats-container {
-    padding: 16px;
-  }
-  
-  .stat-number {
-    font-size: 22px;
-  }
-  
-  .footer-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .search-box {
-    flex-direction: column;
-  }
-  
-  .search-btn {
-    width: 100%;
-  }
-  
-  .topics-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .topic-card {
-    padding: 16px;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
